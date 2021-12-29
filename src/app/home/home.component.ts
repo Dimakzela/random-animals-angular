@@ -10,18 +10,26 @@ import {AnimalDetailComponent} from "../component/animal-detail/animal-detail.co
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  loading = false;
   animals: Animal[];
   count = 1;
 
   constructor(private animalService: AnimalService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.animalService.getAnimals(1).subscribe(res => this.animals = res);
+    this.loading = true;
+    this.animalService.getAnimals(1).subscribe(res => {
+      this.animals = res;
+      this.loading = false
+    });
   }
 
   randomize() {
-    this.animalService.getAnimals(this.count).subscribe(res => this.animals = res);
+    this.loading = true;
+    this.animalService.getAnimals(this.count).subscribe(res => {
+      this.animals = res;
+      this.loading = false
+    });
   }
 
   openDialog(data: Animal) {

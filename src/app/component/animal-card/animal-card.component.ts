@@ -10,6 +10,7 @@ export class AnimalCardComponent implements OnInit {
 
   @Input() animal: Animal;
   @Output() clickEmitter = new EventEmitter<Animal>();
+  loading = true;
 
   constructor() { }
 

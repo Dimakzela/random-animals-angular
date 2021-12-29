@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import { AnimalDetailComponent } from './component/animal-detail/animal-detail.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -21,17 +22,18 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     AnimalCardComponent,
     AnimalDetailComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    FormsModule,
-    MatDialogModule,
-    MatTooltipModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        FormsModule,
+        MatDialogModule,
+        MatTooltipModule,
+        MatProgressSpinnerModule
+    ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [AnimalDetailComponent]

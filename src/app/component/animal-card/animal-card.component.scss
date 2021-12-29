@@ -13,7 +13,7 @@
   margin: 5px;
 
   article {
-    margin: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,17 +39,15 @@
     margin: 2em 0 0 0;
   }
 
-  .thumb {
-    padding-bottom: 60%;
-    background-size: 100% 100%;
-  }
-
-  /*.place {
+  .image {
+    height: 200px;
+    width: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-  }*/
+  }
+
 }
 
 .card:hover {

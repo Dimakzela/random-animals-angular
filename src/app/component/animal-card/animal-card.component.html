@@ -1,5 +1,8 @@
 <div class="card" (click)="clickEmitter.emit(animal)">
-  <div class="thumb" style="background-image: url('{{animal?.image_link}}');"></div>
+  <div class="image">
+    <img [hidden]="loading" height="100%" width="100%" src="{{animal?.image_link}}" (load)="loading = false" alt="">
+    <mat-spinner color="accent" *ngIf="loading"></mat-spinner>
+  </div>
   <article>
     <h1>{{animal?.name}}</h1>
     <span>{{animal?.geo_range}}</span>
