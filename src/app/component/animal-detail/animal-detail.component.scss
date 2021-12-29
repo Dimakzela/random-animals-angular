@@ -1,0 +1,87 @@
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+}
+.thumb {
+  width: 850px;
+  height: 400px;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  width: 850px;
+  padding-top: 15px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+
+.actions {
+  border-top: #999999 solid thin;
+}
+
+.arrow_forward, .arrow_back {
+  color: #fafafa;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+@keyframes animate_back {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-3px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animate_forward {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.arrow_back {
+  animation: animate_back 0.7s infinite;
+}
+
+.arrow_forward {
+  animation: animate_forward 0.7s infinite;
+}
+
+.arrow_back:hover, .arrow_forward:hover {
+  animation: paused;
+}
+

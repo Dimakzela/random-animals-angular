@@ -1,0 +1,15 @@
+<div class="container">
+      <app-animal-card *ngFor="let animal of animals"
+                       (clickEmitter)="openDialog($event)"
+                       [animal]="animal">
+      </app-animal-card>
+</div>
+
+<div class="replay">
+  <input min="1" max="10" type="number" size="1px" [(ngModel)]="count" (change)="validate()"/>
+  <button matTooltip="Reload" mat-icon-button (click)="randomize()">
+    <mat-icon>replay</mat-icon>
+  </button>
+</div>
+
+

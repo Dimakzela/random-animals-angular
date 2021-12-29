@@ -1,0 +1,69 @@
+<h1 mat-dialog-title class="title">{{data?.animal?.name}}</h1>
+<mat-dialog-content class="mat-typography">
+  <div class="dialog-content">
+    <div class="image-view">
+      <div class="thumb" style="background-image: url({{data?.animal?.image_link}})">
+        <div class="arrow_back">
+          <mat-icon matTooltip="Prev" *ngIf=" length != 1 && currentIndex != 0" (click)="prev()">arrow_back_ios
+          </mat-icon>
+        </div>
+        <div class="arrow_forward">
+          <mat-icon matTooltip="Next" *ngIf=" length != 1 && currentIndex != length - 1" (click)="next()">
+            arrow_forward_ios
+          </mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <table>
+        <tr>
+          <td class="name">Type</td>
+          <td>:</td>
+          <td>{{data?.animal?.animal_type || '-'}}</td>
+        </tr>
+        <tr>
+          <td class="name">Location</td>
+          <td>:</td>
+          <td>{{data?.animal?.geo_range || '-'}}</td>
+        </tr>
+        <tr>
+          <td class="name">Latin Name</td>
+          <td>:</td>
+          <td>{{data?.animal?.latin_name || '-'}}</td>
+        </tr>
+        <tr>
+          <td class="name">Diet</td>
+          <td>:</td>
+          <td>{{data?.animal?.diet || '-'}}</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="name">Habit</td>
+          <td>:</td>
+          <td>{{data?.animal?.habitat || '-'}}</td>
+        </tr>
+        <tr>
+          <td class="name">Life span</td>
+          <td>:</td>
+          <td>{{data?.animal?.lifespan || '-'}} year(s)</td>
+        </tr>
+        <tr>
+          <td class="name">Length</td>
+          <td>:</td>
+          <td>{{data?.animal?.length_min || '-'}} - {{data?.animal?.length_max || '-'}}</td>
+        </tr>
+        <tr>
+          <td class="name">Weight</td>
+          <td>:</td>
+          <td>{{data?.animal?.weight_min || '-'}} - {{data?.animal?.weight_max || '-'}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="actions">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+

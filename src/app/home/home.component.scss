@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  max-width: 1410px;
+  min-width: 355px;
+  height: 360px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin: 5px;
+
+}
+
+.replay {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  input {
+    width: 35px;
+  }
+}
+
